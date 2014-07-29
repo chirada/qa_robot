@@ -1,0 +1,15 @@
+*** Settings ***
+Library     Selenium2Library
+
+*** Variables ***
+
+
+*** Testcases ***
+Search to google
+	Open Browser    http://www.google.co.th
+	Input Text    gbqfq    robotframework
+	Click Button    gbqfb
+
+	Close Browser
+
+*** Keywords ***

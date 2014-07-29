@@ -1,0 +1,21 @@
+*** Settings ***
+Library     Selenium2Library
+Test Teardown    Close Browser
+Resource    demo_login_resource.txt
+
+*** Variables ***
+
+
+*** Testcases ***
+Login success
+	ไปที่หน้า Login เข้าระบบ
+	กรอกข้อมูลผู้ใช้งาน    demo    mode
+	ตรวจสอบว่าเข้าสู่ระบบสำเร็จ		
+
+*** Keywords ***
+
+ตรวจสอบว่าเข้าสู่ระบบสำเร็จ
+	Title Should Be    Welcome Page
+	Wait Until Page Contains    Login succeeded
+
+

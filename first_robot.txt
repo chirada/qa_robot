@@ -1,0 +1,16 @@
+*** Settings ***
+Library     Selenium2Library
+
+*** Variables ***
+
+
+*** Testcases ***
+Log in to facebook
+	Open Browser    http://www.facebook.com
+	Input Text    xpath=//*[@id="email"]    chirada_aom@yahoo.com
+	Input Text    pass    aomva56
+	Click Button    เข้าสู่ระบบ
+	Wait Until Page Contains    Cjida Oam
+	Close Browser    
+
+*** Keywords ***
